@@ -38,7 +38,7 @@ public class UserController {
 		}).orElse(new ResponseEntity<User>(HttpStatus.NOT_FOUND));
 	}
 	
-	@PostMapping("/")
+	@PostMapping
 	public ResponseEntity<User> create(@RequestBody User user) {
 		log.info("Create User: {}", user);
 		userRepository.save(user);
